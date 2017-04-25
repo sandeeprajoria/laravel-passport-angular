@@ -1,0 +1,32 @@
+<div>
+  <spinner [loading]="loading"></spinner>
+  <nav class="nav has-shadow">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item">
+          <img src="https://angular.io/resources/images/logos/angular/angular.svg" width="50px" alt="Laravel Angular logo">
+        </a>
+        <a class="nav-item is-tab is-hidden-mobile" [routerLink]="['/home']">HOME</a>
+        <a class="nav-item is-tab is-hidden-mobile" [routerLink]="['/authorized-clients']">Authorized Clients</a>
+        <a class="nav-item is-tab is-hidden-mobile" [routerLink]="['/clients']">Clients</a>
+        <a class="nav-item is-tab is-hidden-mobile is-active">Personal Access Tokens</a>
+      </div>
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="nav-right nav-menu">
+        <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/home']">HOME</a>
+        <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/authorized-clients']">Authorized Clients</a>
+        <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/clients']">Clients</a>
+        <a class="nav-item is-tab is-hidden-tablet is-active" >Personal Access Tokens</a>
+        <a class="nav-item is-tab" role="button" (click)="logout()">LOGOUT</a>
+      </div>
+    </div>
+  </nav>
+  <div class="personal-access-tokens">
+    Welcome to Laravel-Angular 2 Shops<br>
+    <strong>{{name}}</strong>
+  </div>
+</div>
